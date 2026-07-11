@@ -131,7 +131,7 @@ export interface TranslationDict {
   'about.hero_title': string;
   'about.hero_sub': string;
   'about.journey_title': string;
-  
+
   // Timeline
   'tl.apr2006': string;
   'tl.founded_h': string;
@@ -175,7 +175,7 @@ export interface TranslationDict {
   'team.ilmaz_bio': string;
   'team.aysuhan_ttl': string;
   'team.aysuhan_bio': string;
-  
+
   // Team tags
   'tag.mech_eng': string;
   'tag.tech_draw': string;
@@ -244,7 +244,7 @@ export interface TranslationDict {
   'cnt.company_ph': string;
   'cnt.service_lbl': string;
   'cnt.service_def': string;
-  
+
   // Contact Service Optgroups/Options
   'cnt.og_eng': string;
   'cnt.opt_draw': string;
@@ -259,7 +259,7 @@ export interface TranslationDict {
   'cnt.og_int': string;
   'cnt.opt_int': string;
   'cnt.opt_other': string;
-  
+
   'cnt.msg_lbl': string;
   'cnt.msg_ph': string;
   'cnt.btn_submit': string;
@@ -343,7 +343,7 @@ export const translations: Record<Language, TranslationDict> = {
     'idx.svc_title': 'Hizmetlerimiz',
     'idx.svc_sub': 'Plandan koda — mühendislik, veri bilimi ve yapay zeka alanında bütünsel çözümler sunuyoruz.',
 
-    'svc.ai_title': '1. YZ Mühendisliği & LLM Ajan İş Akışları',
+    'svc.ai_title': '1. AI Mühendisliği & LLM Ajan İş Akışları',
     'svc.ai_desc': 'İş süreçlerinizi otomatikleştiren, araç entegrasyonuna sahip ve şirket içi veri kaynaklarınızla konuşan özel yapay zeka ajanları geliştiriyoruz.',
     'svc.ai_bullet1': 'Özel LLM Ajenleri ve Chatbot Geliştirme',
     'svc.ai_bullet2': 'RAG (Artırılmış Geri Getirmeli Nesil) Sistemleri',
@@ -416,7 +416,7 @@ export const translations: Record<Language, TranslationDict> = {
 
     'reg.label': 'Resmi Detaylar',
     'reg.title': 'Kayıtlı & Resmi Güven',
-    'reg.sub': 'Atlas Proje, hem yerel makine ve MEP mühendisliği işlerinde hem de uluslararası teknoloji ve YZ sözleşmelerinde tam yetkili ve tescilli bir limited şirkettir.',
+    'reg.sub': 'Atlas Proje, hem yerel makine ve MEP mühendisliği işlerinde hem de uluslararası teknoloji ve AI sözleşmelerinde tam yetkili ve tescilli bir limited şirkettir.',
     'reg.card_h': 'Şirket Sicil Kartı',
     'reg.legal_name': 'Yasal Unvan',
     'reg.short_name': 'Kısa Ad',
