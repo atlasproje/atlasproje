@@ -25,10 +25,22 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
           <div className="lg:col-span-4 space-y-4">
             <button 
               onClick={() => handleNavClick('home')} 
-              className="flex items-center gap-3 text-left focus:outline-none group"
+              className="flex items-center gap-3 text-left focus:outline-none group transition-spring hover:scale-102"
             >
-              <div className="bg-sky-700 hover:bg-sky-600 transition-colors text-white font-bold text-base px-2.5 py-1 rounded">
-                AP
+              <div className="w-10 h-10 bg-white border border-slate-800 rounded-lg flex items-center justify-center p-1 shadow-sm transition-spring group-hover:rotate-6">
+                <img 
+                  src="/assets/logo/logo_atlas.png" 
+                  alt="Atlas Proje Logo" 
+                  className="w-full h-full object-contain"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const parent = target.parentElement;
+                    if (parent) {
+                      parent.innerHTML = '<span class="text-sky-600 font-extrabold text-sm">AP</span>';
+                    }
+                  }}
+                />
               </div>
               <div className="flex flex-col">
                 <span className="text-white font-extrabold tracking-wider text-base group-hover:text-sky-400 transition-colors">

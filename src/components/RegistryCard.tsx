@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { ClipboardList, Shield } from 'lucide-react';
 
 export const RegistryCard: React.FC = () => {
   const { t } = useLanguage();
+  const [coords, setCoords] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    setCoords({ x, y });
+  };
 
   const registryDetails = [
     { label: t('reg.legal_name'), value: t('reg.legal_name_val'), size: 'text-xxs sm:text-xs text-slate-800' },
@@ -17,13 +26,27 @@ export const RegistryCard: React.FC = () => {
   ];
 
   return (
-    <div className="bg-white border border-slate-200 p-6 sm:p-8 rounded-xl shadow-md space-y-6 text-left relative overflow-hidden backdrop-blur-sm">
-      <div className="absolute top-0 right-0 w-24 h-24 bg-sky-500/5 rounded-full blur-xl pointer-events-none" />
-      
+    <div 
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="bg-white border border-slate-200 p-6 sm:p-8 rounded-xl shadow-md space-y-6 text-left relative overflow-hidden backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:border-slate-300"
+    >
+      {/* Dynamic Cursor Spotlight Radial Glow */}
+      {isHovered && (
+        <div 
+          className="absolute pointer-events-none rounded-full w-[200px] h-[200px] bg-sky-500/8 blur-[50px] -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300"
+          style={{
+            left: `${coords.x}px`,
+            top: `${coords.y}px`,
+          }}
+        />
+      )}
+
       {/* Card Header */}
-      <div className="flex items-center justify-between border-b border-slate-100 pb-4">
+      <div className="flex items-center justify-between border-b border-slate-100 pb-4 relative z-10">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-slate-55 bg-slate-50 rounded-lg border border-slate-100 text-sky-600">
+          <div className="p-2 bg-slate-50 rounded-lg border border-slate-100 text-sky-600">
             <ClipboardList className="w-5 h-5" />
           </div>
           <div>
@@ -39,7 +62,7 @@ export const RegistryCard: React.FC = () => {
       </div>
 
       {/* Details Table */}
-      <div className="space-y-4">
+      <div className="space-y-4 relative z-10">
         {registryDetails.map((item, idx) => (
           <div 
             key={idx} 
@@ -48,7 +71,7 @@ export const RegistryCard: React.FC = () => {
             <span className="text-slate-500 font-bold text-xs sm:text-sm mr-4 flex-shrink-0">
               {item.label}
             </span>
-            <span className={`text-slate-705 text-slate-800 font-medium text-xs sm:text-sm text-right ${item.size || ''}`}>
+            <span className={`text-slate-800 font-medium text-xs sm:text-sm text-right ${item.size || ''}`}>
               {item.value}
             </span>
           </div>

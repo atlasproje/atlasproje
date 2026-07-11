@@ -47,11 +47,23 @@ export const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) =
           {/* Logo */}
           <button 
             onClick={() => handleNavClick('home')} 
-            className="flex items-center gap-3 text-left focus:outline-none group"
+            className="flex items-center gap-3 text-left focus:outline-none group transition-spring hover:scale-102"
             aria-label="Atlas Proje Home"
           >
-            <div className="bg-sky-600 hover:bg-sky-500 transition-colors text-white font-bold text-lg px-3 py-1.5 rounded shadow-sm">
-              AP
+            <div className="w-10 h-10 bg-white border border-slate-100 rounded-lg flex items-center justify-center p-1 shadow-sm transition-spring group-hover:rotate-6">
+              <img 
+                src="/assets/logo/logo_atlas.png" 
+                alt="Atlas Proje Logo" 
+                className="w-full h-full object-contain"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const parent = target.parentElement;
+                  if (parent) {
+                    parent.innerHTML = '<span class="text-sky-655 text-sky-600 font-extrabold text-sm">AP</span>';
+                  }
+                }}
+              />
             </div>
             <div className="flex flex-col">
               <span className="text-slate-900 font-extrabold tracking-wider text-base sm:text-lg group-hover:text-sky-600 transition-colors">

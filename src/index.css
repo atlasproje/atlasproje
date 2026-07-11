@@ -2,6 +2,8 @@
 
 @theme {
   --animate-fadeIn: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-scan: scanSweep 3s linear infinite;
+  --animate-pulse-flow: pulseFlow 2s linear infinite;
   
   @keyframes fadeIn {
     from {
@@ -13,6 +15,39 @@
       transform: translateY(0);
     }
   }
+
+  @keyframes scanSweep {
+    0% {
+      top: 0%;
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      top: 100%;
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulseFlow {
+    0% {
+      stroke-dashoffset: 24;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
+/* Custom spring transitions for precise B2B tactile feel */
+.transition-spring {
+  transition-property: all;
+  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 /* Custom scrollbar for premium light B2B theme */

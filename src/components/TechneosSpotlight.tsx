@@ -1,8 +1,7 @@
-import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { Handshake, ShieldCheck, Globe, Cpu } from 'lucide-react';
+import { Handshake, ShieldCheck, Cpu } from 'lucide-react';
 
-export const TechneosSpotlight: React.FC = () => {
+export const TechneosSpotlight = () => {
   const { t } = useLanguage();
 
   return (
@@ -80,12 +79,30 @@ export const TechneosSpotlight: React.FC = () => {
                 </div>
 
                 {/* Animated Connector Line */}
-                <div className="flex-1 px-4 relative flex flex-col items-center justify-center">
-                  <div className="h-0.5 w-full bg-slate-200 relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-sky-500 to-teal-400 animate-pulse" />
-                  </div>
-                  <Globe className="w-5 h-5 text-sky-600 absolute -top-2 animate-bounce duration-1000" />
-                  <span className="text-xxs text-sky-600 font-bold tracking-widest mt-4 uppercase">Direct Co-op</span>
+                <div className="flex-1 px-2 relative flex flex-col items-center justify-center">
+                  <svg className="w-full h-6" fill="none" viewBox="0 0 100 24">
+                    {/* Background line */}
+                    <path d="M 0 12 L 100 12" stroke="#e2e8f0" strokeWidth="2" strokeDasharray="3 3" />
+                    {/* Pulsing overlay line */}
+                    <path 
+                      d="M 0 12 L 100 12" 
+                      stroke="url(#pulseGrad)" 
+                      strokeWidth="3" 
+                      strokeDasharray="6 12"
+                      className="animate-pulse-flow"
+                      style={{ strokeDashoffset: 24 }}
+                    />
+                    <defs>
+                      <linearGradient id="pulseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="#0ea5e9" />
+                        <stop offset="50%" stopColor="#14b8a6" />
+                        <stop offset="100%" stopColor="#0ea5e9" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <span className="text-[9px] text-sky-600 font-extrabold tracking-widest mt-1 uppercase select-none">
+                    Data Pipeline
+                  </span>
                 </div>
 
                 {/* Techneos Logo Block */}
