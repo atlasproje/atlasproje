@@ -116,7 +116,7 @@ export const Hero = ({ setCurrentPage }: HeroProps) => {
               
               <div className="relative z-10">
                 <img 
-                  src="/assets/illustrations/undraw_code-thinking_tqs9.svg" 
+                  src={`${import.meta.env.BASE_URL}assets/illustrations/undraw_code-thinking_tqs9.svg`} 
                   alt="Engineering and Software Solutions" 
                   className="w-full h-auto max-h-[220px] object-contain mx-auto"
                   onError={(e) => {

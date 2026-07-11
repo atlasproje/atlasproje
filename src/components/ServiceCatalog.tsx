@@ -17,7 +17,7 @@ export const ServiceCatalog: React.FC<ServiceCatalogProps> = ({ layout = 'previe
       title: t('svc.ai_title'),
       desc: t('svc.ai_desc'),
       icon: <Bot className="w-8 h-8 text-sky-600" />,
-      illustration: '/assets/illustrations/undraw_solution-mindset_5xp7.svg',
+      illustration: import.meta.env.BASE_URL + 'assets/illustrations/undraw_solution-mindset_5xp7.svg',
       bullets: [
         t('svc.ai_bullet1'),
         t('svc.ai_bullet2'),
@@ -35,7 +35,7 @@ export const ServiceCatalog: React.FC<ServiceCatalogProps> = ({ layout = 'previe
       title: t('svc.ds_title'),
       desc: t('svc.ds_desc'),
       icon: <Database className="w-8 h-8 text-teal-600" />,
-      illustration: '/assets/illustrations/undraw_growth-analytics_vzjz.svg',
+      illustration: import.meta.env.BASE_URL + 'assets/illustrations/undraw_growth-analytics_vzjz.svg',
       bullets: [
         t('svc.ds_bullet1'),
         t('svc.ds_bullet2'),
@@ -53,7 +53,7 @@ export const ServiceCatalog: React.FC<ServiceCatalogProps> = ({ layout = 'previe
       title: t('svc.mep_title'),
       desc: t('svc.mep_desc'),
       icon: <Compass className="w-8 h-8 text-orange-650 text-orange-600" />,
-      illustration: '/assets/illustrations/undraw_design-components_c2hs.svg',
+      illustration: import.meta.env.BASE_URL + 'assets/illustrations/undraw_design-components_c2hs.svg',
       bullets: [
         t('svc.mep_bullet1'),
         t('svc.mep_bullet2'),
@@ -71,7 +71,7 @@ export const ServiceCatalog: React.FC<ServiceCatalogProps> = ({ layout = 'previe
       title: t('svc.training_title'),
       desc: t('svc.training_desc'),
       icon: <GraduationCap className="w-8 h-8 text-indigo-600" />,
-      illustration: '/assets/illustrations/undraw_teacher_n0ow.svg',
+      illustration: import.meta.env.BASE_URL + 'assets/illustrations/undraw_teacher_n0ow.svg',
       bullets: [
         t('svc.training_bullet1'),
         t('svc.training_bullet2'),

@@ -134,7 +134,7 @@ function App() {
                     {/* B2B Strategy SVG Graphic */}
                     <div className="bg-white border border-slate-200 p-6 rounded-xl shadow-md">
                       <img 
-                        src="/assets/illustrations/undraw_idea-to-plan_jnei.svg" 
+                        src={`${import.meta.env.BASE_URL}assets/illustrations/undraw_idea-to-plan_jnei.svg`} 
                         alt="Corporate Development & Strategy" 
                         className="w-full h-auto max-h-[160px] object-contain mx-auto"
                         onError={(e) => {
@@ -370,7 +370,7 @@ function App() {
                   {/* Vector Illustration showing Inquiry/Response */}
                   <div className="border border-slate-200 p-6 rounded-xl bg-slate-50/50 shadow-sm flex items-center justify-center">
                     <img 
-                      src="/assets/illustrations/undraw_detailed-answer_kys9.svg" 
+                      src={`${import.meta.env.BASE_URL}assets/illustrations/undraw_detailed-answer_kys9.svg`} 
                       alt="Detailed Response Support" 
                       className="w-full h-auto max-h-[140px] object-contain mx-auto"
                       onError={(e) => {

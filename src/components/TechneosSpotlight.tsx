@@ -61,7 +61,7 @@ export const TechneosSpotlight = () => {
                 <div className="flex flex-col items-center gap-2 group">
                   <div className="w-20 h-20 bg-white border border-slate-200 rounded-xl flex items-center justify-center p-3 shadow-sm transition-all group-hover:border-sky-500 duration-300">
                     <img 
-                      src="/assets/logo/logo_atlas.png" 
+                      src={`${import.meta.env.BASE_URL}assets/logo/logo_atlas.png`} 
                       alt="Atlas Proje" 
                       className="w-full h-full object-contain"
                       onError={(e) => {
@@ -109,7 +109,7 @@ export const TechneosSpotlight = () => {
                 <div className="flex flex-col items-center gap-2 group">
                   <div className="w-20 h-20 bg-white border border-slate-200 rounded-xl flex items-center justify-center p-3 shadow-sm transition-all group-hover:border-sky-500 duration-300">
                     <img 
-                      src="/assets/logo/logo_techneos.png" 
+                      src={`${import.meta.env.BASE_URL}assets/logo/logo_techneos.png`} 
                       alt="Techneos" 
                       className="w-full h-full object-contain"
                       onError={(e) => {

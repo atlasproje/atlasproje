@@ -29,7 +29,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
             >
               <div className="w-10 h-10 bg-white border border-slate-800 rounded-lg flex items-center justify-center p-1 shadow-sm transition-spring group-hover:rotate-6">
                 <img 
-                  src="/assets/logo/logo_atlas.png" 
+                  src={`${import.meta.env.BASE_URL}assets/logo/logo_atlas.png`} 
                   alt="Atlas Proje Logo" 
                   className="w-full h-full object-contain"
                   onError={(e) => {
