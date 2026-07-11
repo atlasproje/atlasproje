@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="tr" data-page-key="page.title.index">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas Proje — Mühendislik ve İnovasyon</title>
+  <meta name="description" content="Atlas Proje — Adana-based engineering & technology consultancy. 18+ years of mechanical engineering expertise combined with modern software development and data science." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="container nav__inner">
+
+        <a href="index.html" class="nav__logo" aria-label="Atlas Proje Home">
+          <div class="logo-icon" aria-hidden="true">AP</div>
+          <div class="logo-text">
+            <span class="top">ATLAS PROJE</span>
+            <span class="sub">Engineering &amp; Technology</span>
+          </div>
+        </a>
+
+        <ul class="nav__links" role="list">
+          <li><a href="index.html"    class="nav__link" data-page="index.html"    data-i18n="nav.home">Ana Sayfa</a></li>
+          <li><a href="services.html" class="nav__link" data-page="services.html" data-i18n="nav.services">Hizmetler</a></li>
+          <li><a href="about.html"    class="nav__link" data-page="about.html"    data-i18n="nav.about">Hakkımızda</a></li>
+          <li><a href="contact.html"  class="nav__cta"  data-page="contact.html"  data-i18n="nav.contact">İletişime Geçin</a></li>
+        </ul>
+
+        <div class="lang-switcher" aria-label="Dil seçici / Language switcher">
+          <button class="lang-btn active" data-lang="tr" aria-pressed="true">TR</button>
+          <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+
+        <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <nav class="nav__mobile" aria-label="Mobile navigation">
+      <a href="index.html"    class="nav__link" data-page="index.html"    data-i18n="nav.home">Ana Sayfa</a>
+      <a href="services.html" class="nav__link" data-page="services.html" data-i18n="nav.services">Hizmetler</a>
+      <a href="about.html"    class="nav__link" data-page="about.html"    data-i18n="nav.about_us">Hakkımızda</a>
+      <a href="contact.html"  class="nav__cta"                            data-i18n="nav.contact">İletişime Geçin</a>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="tr" aria-pressed="true">TR</button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ========================= -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+
+        <!-- Left: text -->
+        <div class="hero__content">
+          <span class="hero__eyebrow">
+            <i class="fa-solid fa-circle-dot"></i>
+            <span data-i18n-html="hero.eyebrow">Adana, Türkiye &mdash; Kur. 2006</span>
+          </span>
+
+          <h1 class="hero__title" id="hero-title" data-i18n-html="hero.title">
+            Mühendislik<br />
+            Yenilikle <span class="highlight">Buluşuyor</span>
+          </h1>
+
+          <p class="hero__desc" data-i18n="hero.desc">
+            Hassas makine mühendisliğini modern yazılım geliştirme ve veri bilimiyle buluşturuyoruz — geleneksel firmaların sunamayacağı entegre çözümler sunuyoruz.
+          </p>
+
+          <div class="hero__buttons">
+            <a href="services.html" class="btn btn-primary" data-i18n-html="hero.btn_services">
+              <i class="fa-solid fa-layer-group"></i> Hizmetleri Keşfet
+            </a>
+            <a href="contact.html" class="btn btn-outline" data-i18n-html="hero.btn_contact">
+              <i class="fa-solid fa-envelope"></i> Bize Ulaşın
+            </a>
+          </div>
+
+          <div class="hero__meta">
+            <div class="hero__stat">
+              <span class="hero__stat-num" data-count="18" data-suffix="+">18+</span>
+              <span class="hero__stat-label" data-i18n="hero.stat1_lbl">Yıllık Deneyim</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-num" data-count="2">2</span>
+              <span class="hero__stat-label" data-i18n="hero.stat2_lbl">Uzman Kurucu</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-num" data-count="2" data-suffix="">2</span>
+              <span class="hero__stat-label" data-i18n="hero.stat3_lbl">Temel Disiplin</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: floating cards -->
+        <div class="hero__visual" aria-hidden="true">
+          <div class="hero__card">
+            <div class="hero__card-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+            <div class="hero__card-title" data-i18n="hero.card1_title">Makine Mühendisliği</div>
+            <div class="hero__card-text" data-i18n-html="hero.card1_text">Teknik çizimler, yapısal tasarım &amp; proje danışmanlığı</div>
+          </div>
+          <div class="hero__card-row">
+            <div class="hero__card">
+              <div class="hero__card-icon"><i class="fa-solid fa-code"></i></div>
+              <div class="hero__card-title" data-i18n="hero.card2_title">Yazılım Geliştirme</div>
+              <div class="hero__card-text" data-i18n-html="hero.card2_text">Özel uygulamalar &amp; sistemler</div>
+            </div>
+            <div class="hero__card">
+              <div class="hero__card-icon"><i class="fa-solid fa-chart-line"></i></div>
+              <div class="hero__card-title" data-i18n="hero.card3_title">Veri Bilimi</div>
+              <div class="hero__card-text" data-i18n-html="hero.card3_text">Analitik &amp; makine öğrenmesi çözümleri</div>
+            </div>
+          </div>
+          <div class="hero__card">
+            <div class="hero__card-icon"><i class="fa-solid fa-link"></i></div>
+            <div class="hero__card-title" data-i18n="hero.card4_title">Entegre Çözümler</div>
+            <div class="hero__card-text" data-i18n="hero.card4_text">Mühendislik hassasiyetinin akıllı yazılımla buluştuğu yer</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== STATS BAR =================== -->
+    <div class="stats" aria-label="Company highlights">
+      <div class="container">
+        <div class="stats__inner">
+          <div class="stats__item">
+            <div class="stats__num"><span data-count="18" data-suffix="+">18+</span></div>
+            <div class="stats__label" data-i18n="stats.years_biz">Yıllık Faaliyet</div>
+          </div>
+          <div class="stats__item">
+            <div class="stats__num"><span data-count="2">2</span></div>
+            <div class="stats__label" data-i18n="stats.expert_prt">Uzman Ortak</div>
+          </div>
+          <div class="stats__item">
+            <div class="stats__num"><span data-count="2026">2026</span></div>
+            <div class="stats__label" data-i18n-html="stats.active_grow">Aktif &amp; Büyüyen</div>
+          </div>
+          <div class="stats__item">
+            <div class="stats__num"><span data-count="2">2</span></div>
+            <div class="stats__label" data-i18n="stats.core_disc">Temel Disiplin</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== SERVICES ==================== -->
+    <section class="section" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <header class="section-header section-header--center">
+          <span class="section-label" data-i18n="idx.svc_label">Neler Yapıyoruz</span>
+          <h2 class="section-title" id="services-heading" data-i18n="idx.svc_title">Hizmetlerimiz</h2>
+          <p class="section-sub" data-i18n="idx.svc_sub">
+            Plandan koda — mühendislik ve teknoloji hizmetlerinin tüm yelpazesini ve aralarındaki her şeyi sunuyoruz.
+          </p>
+        </header>
+
+        <div class="service-grid">
+
+          <!-- Engineering -->
+          <article class="service-card service-card--eng reveal">
+            <div class="service-card__icon">
+              <i class="fa-solid fa-compass-drafting"></i>
+            </div>
+            <span class="badge badge-navy" style="margin-bottom:10px;" data-i18n="svc_card.eng_badge">Temel Güe</span>
+            <h3 class="service-card__title" data-i18n="svc_card.eng_title">Makine Mühendisliği</h3>
+            <p class="service-card__text" data-i18n="svc_card.eng_text">
+              18+ yıllık deneyime dayanan hassas teknik çizim, yapısal ve mekanik tasarım ve tam proje danışmanlığı.
+            </p>
+            <ul class="service-card__list">
+              <li data-i18n-html="svc_card.eng_li1"><i class="fa-solid fa-chevron-right"></i>Teknik çizim &amp; CAD</li>
+              <li data-i18n-html="svc_card.eng_li2"><i class="fa-solid fa-chevron-right"></i>Yapısal &amp; mekanik tasarım</li>
+              <li data-i18n-html="svc_card.eng_li3"><i class="fa-solid fa-chevron-right"></i>İnşaat &amp; altyapı</li>
+              <li data-i18n-html="svc_card.eng_li4"><i class="fa-solid fa-chevron-right"></i>Proje yönetimi &amp; danışmanlık</li>
+            </ul>
+            <a href="services.html#engineering" class="service-card__link" data-i18n-html="svc_card.eng_link">
+              Daha fazla <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- Software — featured -->
+          <article class="service-card service-card--soft service-card--featured reveal reveal-delay-1">
+            <div class="service-card__icon" style="background:rgba(245,166,35,0.15);color:#f5a623;">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <span class="badge" style="background:rgba(245,166,35,0.15);color:#f5a623;margin-bottom:10px;" data-i18n-html="svc_card.sw_badge">
+              <i class="fa-solid fa-star" style="font-size:0.6rem;"></i> Öne Çıkan Hizmet
+            </span>
+            <h3 class="service-card__title" data-i18n-html="svc_card.sw_title">Yazılım &amp; Veri Bilimi</h3>
+            <p class="service-card__text" data-i18n="svc_card.sw_text">
+              Doğrudan uluslararası proje deneyimiyle özel yazılım geliştirme, veri hatları, makine öğrenmesi modelleri ve analitik.
+            </p>
+            <ul class="service-card__list">
+              <li data-i18n-html="svc_card.sw_li1"><i class="fa-solid fa-chevron-right"></i>Özel yazılım geliştirme</li>
+              <li data-i18n-html="svc_card.sw_li2"><i class="fa-solid fa-chevron-right"></i>Veri bilimi &amp; analitik</li>
+              <li data-i18n-html="svc_card.sw_li3"><i class="fa-solid fa-chevron-right"></i>Makine öğrenmesi &amp; YZ</li>
+              <li data-i18n-html="svc_card.sw_li4"><i class="fa-solid fa-chevron-right"></i>API tasarımı &amp; entegrasyon</li>
+            </ul>
+            <a href="services.html#software" class="service-card__link" style="color:var(--accent-light);" data-i18n-html="svc_card.sw_link">
+              Daha fazla <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- Integrated -->
+          <article class="service-card service-card--int reveal reveal-delay-2">
+            <div class="service-card__icon">
+              <i class="fa-solid fa-link"></i>
+            </div>
+            <span class="badge badge-green" style="margin-bottom:10px;" data-i18n="svc_card.int_badge">Farkımız</span>
+            <h3 class="service-card__title" data-i18n="svc_card.int_title">Entegre Çözümler</h3>
+            <p class="service-card__text" data-i18n="svc_card.int_text">
+              Mühendislik ile yazılımın eşsiz buluşması — dijital ikizler, mühendislik iş akışlarının otomasyonu ve akıllı altyapı.
+            </p>
+            <ul class="service-card__list">
+              <li data-i18n-html="svc_card.int_li1"><i class="fa-solid fa-chevron-right"></i>Mühendislik süreçleri otomasyonu</li>
+              <li data-i18n-html="svc_card.int_li2"><i class="fa-solid fa-chevron-right"></i>Dijital mühendislik araçları</li>
+              <li data-i18n-html="svc_card.int_li3"><i class="fa-solid fa-chevron-right"></i>Akıllı bina &amp; IoT kavramları</li>
+              <li data-i18n-html="svc_card.int_li4"><i class="fa-solid fa-chevron-right"></i>Simülasyon &amp; modelleme yazılımı</li>
+            </ul>
+            <a href="services.html#integrated" class="service-card__link" data-i18n-html="svc_card.int_link">
+              Daha fazla <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT PREVIEW =============== -->
+    <section class="section section--gray" id="about-preview" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-preview__inner">
+
+          <!-- Visual -->
+          <div class="about-preview__image reveal">
+            <div class="about-preview__img-box">
+              <div class="about-preview__gear"><i class="fa-solid fa-gear"></i></div>
+              <div class="about-preview__badge-float top-right">
+                <div class="badge-float__icon badge-float__icon--tech">
+                  <i class="fa-solid fa-code"></i>
+                </div>
+                <div>
+                  <span class="badge-float__label" data-i18n="about_prev.swlbl">Yazılım Geliştirme</span>
+                  <span class="badge-float__value" data-i18n="about_prev.swval">Modern Altyapı</span>
+                </div>
+              </div>
+              <div class="about-preview__badge-float bottom-left">
+                <div class="badge-float__icon badge-float__icon--eng">
+                  <i class="fa-solid fa-compass-drafting"></i>
+                </div>
+                <div>
+                  <span class="badge-float__label" data-i18n="about_prev.englbl">Mühendislik</span>
+                  <span class="badge-float__value" data-i18n="about_prev.engval">Kur. 2006</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="about-preview__content reveal reveal-delay-1">
+            <span class="section-label" data-i18n="about_prev.label">Atlas Proje Hakkında</span>
+            <h2 class="section-title" data-i18n-html="about_prev.title">Modern Vizyonlu Bir Baba-Oğul Mühendislik Firması</h2>
+            <p class="section-sub" data-i18n="about_prev.sub">
+              2006 yılında Adana'da kurulan Atlas Proje, bir makine mühendisliği danışmanlığı olarak başladı. Bugün, o derin mühendislik mirasını son teknoloji yazılım geliştirme ve veri bilimiyle birleştiriyoruz.
+            </p>
+
+            <div class="about-preview__points">
+              <div class="about-point">
+                <div class="about-point__icon"><i class="fa-solid fa-medal"></i></div>
+                <div>
+                  <h4 data-i18n="about_prev.p1_h">18+ Yıllık Mühendislik Mükemmeliyeti</h4>
+                  <p data-i18n="about_prev.p1_t">Makine, yapısal ve inşaat mühendisliğinde onlarca yıllık gerçek dünya proje deneyimi.</p>
+                </div>
+              </div>
+              <div class="about-point">
+                <div class="about-point__icon"><i class="fa-solid fa-globe"></i></div>
+                <div>
+                  <h4 data-i18n="about_prev.p2_h">Uluslararası Yazılım Deneyimi</h4>
+                  <p data-i18n="about_prev.p2_t">Dünya standartlarında yazılım ve veri bilimi uygulamaları getiren Avrupa teknoloji şirketleriyle aktif işbirliği.</p>
+                </div>
+              </div>
+              <div class="about-point">
+                <div class="about-point__icon"><i class="fa-solid fa-handshake"></i></div>
+                <div>
+                  <h4 data-i18n="about_prev.p3_h">Küçük Ekip, Tam Bağlılık</h4>
+                  <p data-i18n="about_prev.p3_t">İki ortak olmak, her projenin doğrudan en kıdemli kişilerin ilgisini alması anlamına gelir — her zaman.</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="about.html" class="btn btn-outline-dark" data-i18n-html="about_prev.btn">
+              <i class="fa-solid fa-users"></i> Ekibimizle Tanışın
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== VISION ====================== -->
+    <section class="section section--dark" id="vision" aria-labelledby="vision-heading">
+      <div class="container">
+        <div class="vision__inner">
+
+          <div class="vision__side reveal">
+            <span class="section-label" data-i18n="vision.label">Vizyonumuz</span>
+            <h2 class="section-title" id="vision-heading" data-i18n="vision.title">
+              Mühendislik Hassasiyetinin Dijital Zeka ile Buluştuğu Yer
+            </h2>
+            <p class="section-sub" data-i18n="vision.sub">
+              Uzun vadeli hedefimiz, fiziksel ve dijital mühendislik dünyaları arasında köprü olmaktır.
+            </p>
+            <a href="services.html" class="btn btn-primary" style="margin-top:8px;" data-i18n-html="vision.btn">
+              <i class="fa-solid fa-layer-group"></i> Tüm Hizmetleri Gör
+            </a>
+          </div>
+
+          <div class="vision__pillars reveal reveal-delay-1">
+            <div class="vision__pillar">
+              <i class="fa-solid fa-ruler-combined"></i>
+              <h4 data-i18n="vision.p1_h">Mühendislik Temeli</h4>
+              <p data-i18n="vision.p1_t">Gerçek yapılar ve sistemlerle onlarca yıllık uygulamalı deneyim.</p>
+            </div>
+            <div class="vision__pillar">
+              <i class="fa-solid fa-brain"></i>
+              <h4 data-i18n="vision.p2_h">Akıllı Yazılım</h4>
+              <p data-i18n="vision.p2_t">Mühendislik bağlamında oluşturulmuş özel uygulamalar, veri hatları ve makine öğrenmesi.</p>
+            </div>
+            <div class="vision__pillar">
+              <i class="fa-solid fa-rotate"></i>
+              <h4 data-i18n="vision.p3_h">Süreç Otomasyonu</h4>
+              <p data-i18n="vision.p3_t">Zamandan tasarruf etmek ve hataları azaltmak için tekrarlayan mühendislik iş akışlarını otomatikleştirme.</p>
+            </div>
+            <div class="vision__pillar">
+              <i class="fa-solid fa-earth-europe"></i>
+              <h4 data-i18n="vision.p4_h">Uluslararası Erişim</h4>
+              <p data-i18n="vision.p4_t">Adana'da yerel, Avrupa'da küresel ortaklarla hizmet veriyoruz.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CALL TO ACTION ============== -->
+    <section class="section" id="cta" aria-labelledby="cta-heading">
+      <div class="container">
+        <div style="max-width:700px;margin:0 auto;text-align:center;" class="reveal">
+          <span class="section-label" data-i18n="cta.label">Başlamaya Hazır mısınız?</span>
+          <h2 class="section-title" id="cta-heading" data-i18n="cta.title">
+            Birlikte Bir Şeyler İnşa Edelim
+          </h2>
+          <p class="section-sub" style="margin:0 auto 36px;" data-i18n="cta.sub">
+            Bir teknik çizime, yazılım çözümüne veya her ikisini birleştiren bir projeye ihtiyaç duyuyor olun — sizden haber almaktan memnuniyet duyarız.
+          </p>
+          <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+            <a href="contact.html" class="btn btn-primary" data-i18n-html="cta.btn1">
+              <i class="fa-solid fa-envelope"></i> İletişime Geçin
+            </a>
+            <a href="services.html" class="btn btn-outline-dark" data-i18n-html="cta.btn2">
+              <i class="fa-solid fa-layer-group"></i> Hizmetleri İncele
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ======================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+
+        <!-- Brand -->
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo" aria-label="Atlas Proje Home">
+            <div class="logo-icon" aria-hidden="true">AP</div>
+            <div class="logo-text">
+              <span class="top">ATLAS PROJE</span>
+              <span class="sub">Engineering &amp; Technology</span>
+            </div>
+          </a>
+          <p class="footer__brand-desc" data-i18n-html="footer.brand_desc">
+            Adana, Türkiye merkezli bir mühendislik &amp; teknoloji danışmanlık firması.
+          </p>
+          <p class="footer__reg" data-i18n-html="footer.reg">Sicil No: 49321 &mdash; Adana Ticaret Sicil Memurluğu</p>
+        </div>
+
+        <!-- Pages -->
+        <div>
+          <p class="footer__heading" data-i18n="footer.pages">Sayfalar</p>
+          <ul class="footer__links">
+            <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.home">Ana Sayfa</span></a></li>
+            <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.svc_heading">Hizmetler</span></a></li>
+            <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.about_us">Hakkımızda</span></a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.contact">İletişim</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <p class="footer__heading" data-i18n="footer.svc_heading">Hizmetler</p>
+          <ul class="footer__links">
+            <li><a href="services.html#engineering"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.mech_eng">Makine Mühendisliği</span></a></li>
+            <li><a href="services.html#software"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.sw_dev">Yazılım Geliştirme</span></a></li>
+            <li><a href="services.html#software"><i class="fa-solid fa-chevron-right"></i> <span data-i18n-html="footer.data_sci">Veri Bilimi &amp; YZ</span></a></li>
+            <li><a href="services.html#integrated"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.integrated">Entegre Çözümler</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <p class="footer__heading" data-i18n="footer.cnt_heading">İletişim</p>
+          <ul class="footer__links" style="gap:12px;">
+            <li>
+              <i class="fa-solid fa-location-dot" style="color:var(--accent);width:14px;"></i>
+              <span style="font-size:0.85rem;">Reşatbey Mah. Cumhuriyet Cad.<br>Gürbiçer Apt. Asma Kat No:6<br>Seyhan / Adana, Turkey</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <span data-i18n-html="footer.copyright">&copy; 2006&ndash;2026 Atlas Proje Müşavirlik Mühendislik İnşaat Taahhüt Ticaret Ltd. Şti. Tüm hakları saklıdır.</span>
+        <span data-i18n="footer.tagline">Hassasiyetle tasarlandı.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
