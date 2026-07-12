@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { MapPin, ChevronRight } from 'lucide-react';
+import { MapPin, ChevronRight, Mail } from 'lucide-react';
 
 interface FooterProps {
   setCurrentPage: (page: string) => void;
@@ -141,6 +141,12 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
                 Gürbiçer Apt. Asma Kat No:6<br />
                 Seyhan / Adana, Turkey
               </p>
+            </div>
+            <div className="flex gap-2 items-center">
+              <Mail className="w-4 h-4 text-sky-500 flex-shrink-0" />
+              <a href="mailto:metinunlu97@gmail.com" className="text-xs sm:text-sm text-slate-400 font-light hover:text-white transition-colors">
+                metinunlu97@gmail.com
+              </a>
             </div>
           </div>
 

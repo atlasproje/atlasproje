@@ -57,7 +57,7 @@ export const ContactForm: React.FC = () => {
     );
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     setTouched({
@@ -77,7 +77,53 @@ export const ContactForm: React.FC = () => {
 
     setStatus('sending');
 
-    setTimeout(() => {
+    const formUrl = import.meta.env.VITE_CONTACT_FORM_URL;
+
+    if (!formUrl) {
+      // Fallback: If no Google Apps Script Web App URL is configured, simulate success.
+      console.warn("Contact form URL (VITE_CONTACT_FORM_URL) not set. Simulating form submission.");
+      setTimeout(() => {
+        setStatus('success');
+        setFields({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          company: '',
+          service: '',
+          message: '',
+        });
+        setTouched({
+          firstName: false,
+          lastName: false,
+          email: false,
+          phone: false,
+          company: false,
+          service: false,
+          message: false,
+        });
+      }, 1500);
+      return;
+    }
+
+    try {
+      // Using mode: 'no-cors' is necessary for Google Apps Script Web Apps.
+      // Google redirects the POST request to script.googleusercontent.com,
+      // which causes CORS blocks on standard mode: 'cors' requests in the browser,
+      // even if the script returns CORS headers. no-cors allows the submission to succeed.
+      const token = import.meta.env.VITE_CONTACT_FORM_TOKEN || "";
+      await fetch(formUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...fields,
+          token: token
+        }),
+      });
+
       setStatus('success');
       setFields({
         firstName: '',
@@ -97,7 +143,10 @@ export const ContactForm: React.FC = () => {
         service: false,
         message: false,
       });
-    }, 1500);
+    } catch (err) {
+      console.error("Error submitting contact form", err);
+      setStatus('error');
+    }
   };
 
   return (

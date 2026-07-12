@@ -36,6 +36,9 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Build
+        env:
+          VITE_CONTACT_FORM_URL: ${{ secrets.VITE_CONTACT_FORM_URL }}
+          VITE_CONTACT_FORM_TOKEN: ${{ secrets.VITE_CONTACT_FORM_TOKEN }}
         run: yarn build
 
       - name: Upload artifact

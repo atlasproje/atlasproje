@@ -21,7 +21,8 @@ import {
   CalendarRange, 
   ExternalLink,
   Building,
-  UserCheck
+  UserCheck,
+  Mail
 } from 'lucide-react';
 
 function App() {
@@ -282,6 +283,23 @@ function App() {
                           Reşatbey Mah. Cumhuriyet Cad.<br />
                           Gürbiçer Apt. Asma Kat No:6<br />
                           Seyhan / Adana, Turkey
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Email */}
+                    <div className="flex gap-4">
+                      <div className="p-3 bg-slate-50 border border-slate-150 rounded-lg text-sky-655 text-sky-600 flex-shrink-0">
+                        <Mail className="w-5 h-5" />
+                      </div>
+                      <div className="space-y-1">
+                        <h4 className="text-slate-800 font-bold text-sm tracking-wide uppercase">
+                          {t('cnt.email_lbl')}
+                        </h4>
+                        <p className="text-slate-550 text-slate-600 text-sm leading-relaxed font-light">
+                          <a href="mailto:metinunlu97@gmail.com" className="hover:text-sky-600 transition-colors font-medium">
+                            metinunlu97@gmail.com
+                          </a>
                         </p>
                       </div>
                     </div>
