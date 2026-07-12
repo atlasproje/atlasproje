@@ -693,7 +693,7 @@ export const translations: Record<Language, TranslationDict> = {
     'team.title': 'Meet the Team',
     'team.sub': 'Two people. Two complementary skill sets. A shared commitment to delivering quality work on every project.',
     'team.ilmaz_ttl': 'Founder & Managing Director',
-    'team.ilmaz_bio': 'With over 30 years of hands-on experience in mechanical and MEP design, İlmız is the backbone of Atlas Proje\'s engineering credibility. He leads client relationships and supervises technical drawings, building regulations compliance, and site project management across Adana.',
+    'team.ilmaz_bio': 'With over 30 years of hands-on experience in mechanical and MEP design, Ilmiz is the backbone of Atlas Proje\'s engineering credibility. He leads client relationships and supervises technical drawings, building regulations compliance, and site project management across Adana.',
     'team.aysuhan_ttl': 'Technology Lead',
     'team.aysuhan_bio': 'Bridging his mechanical engineering background with modern data science and artificial intelligence. Metin directs the technology division at Atlas Proje, managing international AI pipelines and LLM workflows in direct collaboration with Techneos (Italy).',
 

@@ -134,7 +134,7 @@ export const Hero = ({ setCurrentPage }: HeroProps) => {
               </div>
 
               {/* Ticker terminal window */}
-              <div className="mt-4 bg-slate-950 rounded-lg p-3 border border-slate-900 text-left font-mono text-[9px] sm:text-[10px] text-teal-400 select-none">
+              <div className="mt-4 bg-slate-950 rounded-lg p-3 border border-slate-900 text-left font-mono text-[9px] sm:text-[10px] text-teal-400 select-none w-full min-w-0 overflow-hidden">
                 <div className="flex items-center justify-between border-b border-slate-900 pb-1.5 mb-1.5">
                   <div className="flex items-center gap-1">
                     <span className="w-2 h-2 rounded-full bg-rose-500/80" />
@@ -145,15 +145,15 @@ export const Hero = ({ setCurrentPage }: HeroProps) => {
                     agentic-engine.sh
                   </span>
                 </div>
-                <div className="space-y-1 h-[55px] overflow-hidden flex flex-col justify-end font-medium">
+                <div className="space-y-1 h-[55px] overflow-hidden flex flex-col justify-end font-medium w-full min-w-0">
                   {logHistory.map((log, idx) => (
-                    <p key={idx} className="truncate opacity-50">
-                      <span className="text-slate-650 text-slate-600 font-bold mr-1">$</span> {log}
+                    <p key={idx} className="break-words whitespace-pre-wrap opacity-50 w-full min-w-0 flex-shrink-0">
+                      <span className="text-slate-600 font-bold mr-1">$</span>{log}
                     </p>
                   ))}
-                  <p className="flex items-center gap-1 text-teal-300">
-                    <span className="text-slate-655 text-slate-600 font-bold mr-1">$</span> {currentText}
-                    <span className="w-1.5 h-3 bg-teal-400 animate-pulse inline-block" />
+                  <p className="text-teal-300 w-full min-w-0 flex-shrink-0 break-words whitespace-pre-wrap">
+                    <span className="text-slate-600 font-bold mr-1">$</span>{currentText}
+                    <span className="w-1.5 h-3 bg-teal-400 animate-pulse inline-block ml-1 align-middle" />
                   </p>
                 </div>
               </div>

@@ -26,7 +26,7 @@ import {
 
 function App() {
   const [currentPage, setCurrentPage] = useState<string>('home');
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const handleNav = (page: string) => {
     setCurrentPage(page);
@@ -34,7 +34,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-slate-800 flex flex-col font-sans selection:bg-sky-600 selection:text-white">
+    <div lang={language} className="min-h-screen bg-white text-slate-800 flex flex-col font-sans selection:bg-sky-600 selection:text-white">
       {/* Navigation Header */}
       <Header currentPage={currentPage} setCurrentPage={handleNav} />
 
